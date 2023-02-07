@@ -1,0 +1,74 @@
+body{
+    background-color: bisque;
+}
+h1{
+    text-align: center;
+    color: black;
+}
+
+#cont1{
+    position: relative;
+    left: 25vw;
+    width: 50vw;
+    background-color: white;
+    
+}
+#description{
+    border: none;
+    margin-top: 2px;
+}
+
+.lm-1{
+    /* border-top: 1px solid black; */
+    margin-left: 20px;
+}
+
+#cat-1{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    border-top: 1px black solid;
+    border-bottom: 1px black solid;
+
+
+
+}
+.dis-inline{
+    border-left: 1px solid black;
+}
+.cat-left{
+    position: relative;
+    left: -200;
+}
+.date-right{
+    margin-left: 20px;
+}
+
+button[type="submit"]{
+    margin: 40px;
+    height: 60px;
+    width: 100px;
+    margin-left: 100px;
+}
+
+
+
+
+.list-item{
+    border-top: 1px solid black;
+    list-style: none;
+    /* background-color: rgb(101, 101, 236); */
+    /* position: relative; */
+    width: 100%;
+    margin: 2px;
+    color: black;
+    /* left: 38%; */
+}
+.list-item p{
+    /* display: inline-block; */
+    margin: 4px;
+}
+.details{
+    display: flex;
+    justify-content: space-between;
+}

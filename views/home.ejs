@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title><%= title %></title>
+        <link rel="stylesheet" href="/css/home.css">
+        <script src="https://kit.fontawesome.com/ce054a7d05.js" crossorigin="anonymous"></script>
+        
+    </head>
+    <body>
+        <div id="cont1">
+            <h1>TODO LIST</h1>
+        <form action="/to-do-list" method="POST">
+            <div class="lm-1" id="desc-label">
+                <label for="description" >DESCRIPTION </label> <br>
+                <input type="text" id="description" name="description" placeholder="What do you need to do?">
+            </div>
+
+            <div id="cat-1">
+                <div class="flex lm-1 cat-left">
+                    <p>CATEGORY</p>
+                <select name="category">
+                    <option value="personal">Personal</option>
+                    <option value="work">Work</option>
+                    <option value="school">School</option>
+                    <option value="others">Others</option>
+    
+                </select>
+                </div>
+                
+                <div class="lm-1 dis-inline date-right">
+                    <label for="Test_DatetimeLocal">Due Date</label> <br>
+                    <input type="datetime-local" id="Test_DatetimeLocal" name="date">
+                </div>
+            </div>
+
+        <div>
+            <button type="submit">
+                <i class="fa-solid fa-plus"></i> Add Task
+            </button>
+        </div>
+        </form>
+
+        <ul>
+            <% for(let i of contact_list) { %>
+                <li class="list-item">
+                    <div class="details">
+                    <p> <%=i.description %> </p>
+                    <p> <%=i.category %> </p>
+                    <p> <%=i.date %> </p>
+    
+                    </div>
+                    <div class="delete-button">
+                        <a href="/delete-contact/?id=<%= i._id %>">
+                            <i class="fa-solid fa-square-xmark"></i>
+                        </a>
+    
+                    </div>
+                </li>
+    
+           <% } %>
+        </ul>
+    </div>
+
+    
+
+    </body>
+        
+</html>
